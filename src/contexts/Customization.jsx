@@ -2,12 +2,12 @@ import { createContext, useContext, useState } from "react";
 
 const sofaColors = [
   {
-    color: "#683434",
-    name: "brown",
+    color: "#dbd4c9",
+    name: "dublin",
   },
   {
-    color: "#1a5e1a",
-    name: "green",
+    color: "#7D6650",
+    name: "brown",
   },
   {
     color: "#659994",
@@ -37,12 +37,12 @@ const sofaColors = [
 
 const cushionColors = [
   {
-    color: "#683434",
-    name: "brown",
+    color: "#dbd4c9",
+    name: "dublin",
   },
   {
-    color: "#1a5e1a",
-    name: "green",
+    color: "#7D6650",
+    name: "brown",
   },
   {
     color: "#659994",

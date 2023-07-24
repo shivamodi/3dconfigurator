@@ -24,10 +24,10 @@ function Sofa(props) {
   });
 
   const fabricTextureProps = useTexture({
-    map: "./textures/fabric/5e715432c17721d0fefafca0bf9d85243041609faff11c74b305580b70e72503-optimised_jpg.jpg",
-    normalMap: "./textures/fabric/Fabric_Knitted_006_normal.jpg",
-    roughnessMap: "./textures/fabric/Fabric_Knitted_006_roughness.jpg",
-    aoMap: "./textures/fabric/Fabric_Knitted_006_ambientOcclusion.jpg",
+    map: "./textures/fabric/beverly-hills-02.jpg",
+    normalMap: "./textures/fabric/beverly-hills-02-Normal.jpg",
+    roughnessMap: "./textures/fabric/beverly-hills-02-Roughness.jpg",
+    aoMap: "./textures/fabric/beverly-hills-02-AO.jpg",
   });
 
   // leatherTextureProps.map.repeat.set(3, 3);
@@ -47,8 +47,8 @@ function Sofa(props) {
   fabricTextureProps.normalMap.repeat.set(3, 3);
   fabricTextureProps.roughnessMap.repeat.set(3, 3);
   fabricTextureProps.aoMap.repeat.set(3, 3);
-  // fabricTextureProps.map.wrapS = fabricTextureProps.map.wrapT =
-  //   THREE.RepeatWrapping;
+  fabricTextureProps.map.wrapS = fabricTextureProps.map.wrapT =
+    THREE.RepeatWrapping;
   fabricTextureProps.normalMap.wrapS = fabricTextureProps.normalMap.wrapT =
     THREE.RepeatWrapping;
   fabricTextureProps.roughnessMap.wrapS =

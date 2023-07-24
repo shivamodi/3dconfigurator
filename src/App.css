@@ -27,7 +27,7 @@
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: black;
 }
 
 .configurator__section__values {
@@ -59,7 +59,7 @@
 }
 
 .item.item--active .item__dot {
-  border: solid 2px white;
+  border: solid 2px black;
 }
 
 .item__label {
@@ -70,5 +70,5 @@
   text-transform: capitalize;
 }
 .item.item--active .item__label {
-  color: white;
+  color: black;
 }

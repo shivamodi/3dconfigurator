@@ -1,5 +1,6 @@
 import {
   MeshReflectorMaterial,
+  OrbitControls,
   PresentationControls,
   Stage,
 } from "@react-three/drei";
@@ -11,7 +12,6 @@ const Experience = () => {
       <PresentationControls
         speed={1.5}
         global
-        polar={[-0.1, Math.PI / 4]}
         rotation={[Math.PI / 8, Math.PI / 4, 0]}
       >
         <Stage environment="city" intensity={0.6} castShadow={false}>
@@ -28,11 +28,11 @@ const Experience = () => {
             depthScale={1.2}
             minDepthThreshold={0.4}
             maxDepthThreshold={1.4}
-            color="#101010"
             metalness={0.5}
           />
         </mesh>
       </PresentationControls>
+      <OrbitControls />
     </>
   );
 };
