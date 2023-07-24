@@ -1,15 +1,18 @@
+import { act } from "@react-three/fiber";
 import { useCustomization } from "../contexts/Customization";
 
 const Configurator = () => {
   const {
     material,
     setMaterial,
-    sofaColors,
-    sofaColor,
-    setSofaColor,
-    cushionColors,
-    cushionColor,
-    setCushionColor,
+    sofaShades,
+    sofaShade,
+    setSofaShade,
+    fabricColors,
+    fabricColor,
+    setFabricColor,
+    activeFabric,
+    setActiveFabric,
   } = useCustomization();
 
   return (
@@ -32,15 +35,15 @@ const Configurator = () => {
         </div>
       </div>
       <div className="configurator__section">
-        <div className="configurator__section__title">sofa color</div>
+        <div className="configurator__section__title">sofa shade</div>
         <div className="configurator__section__values">
-          {sofaColors.map((item, index) => (
+          {sofaShades.map((item, index) => (
             <div
               key={index}
               className={`item ${
-                item.color === sofaColor.color ? "item--active" : ""
+                item.color === sofaShade.color ? "item--active" : ""
               }`}
-              onClick={() => setSofaColor(item)}
+              onClick={() => { setSofaShade(item); setActiveFabric(fabricColors[index][1]);  } }
             >
               <div
                 className="item__dot"
@@ -52,15 +55,15 @@ const Configurator = () => {
         </div>
       </div>
       <div className="configurator__section">
-        <div className="configurator__section__title">Cushion color</div>
+        <div className="configurator__section__title">Fabric color</div>
         <div className="configurator__section__values">
-          {cushionColors.map((item, index) => (
+          {activeFabric.map((item, index) => (
             <div
               key={index}
               className={`item ${
-                item.color === cushionColor.color ? "item--active" : ""
+                item.color === sofaShade.color ? "item--active" : ""
               }`}
-              onClick={() => setCushionColor(item)}
+              onClick={() => setFabricColor(item)}
             >
               <div
                 className="item__dot"

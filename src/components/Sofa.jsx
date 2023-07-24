@@ -14,7 +14,7 @@ import { useCustomization } from "../contexts/Customization";
 
 function Sofa(props) {
   const { nodes, materials } = useGLTF("./models/sectional.gltf");
-  const { material, sofaColor, cushionColor } = useCustomization();
+  const { material, sofaShade, activeFabric, fabricColor } = useCustomization();
 
   const leatherTextureProps = useTexture({
     // map: "./textures/leather/Leather_008_Base Color.jpg",
@@ -62,7 +62,7 @@ function Sofa(props) {
           {...(material === "leather"
             ? leatherTextureProps
             : fabricTextureProps)}
-          color={sofaColor.color}
+          color={fabricColor.color}
         />
       </mesh>
       <mesh geometry={nodes.Box008.geometry} castShadow>
@@ -94,7 +94,7 @@ function Sofa(props) {
           {...(material === "leather"
             ? leatherTextureProps
             : fabricTextureProps)}
-          color={cushionColor.color}
+          color={fabricColor.color}
         />
       </mesh>     
       
