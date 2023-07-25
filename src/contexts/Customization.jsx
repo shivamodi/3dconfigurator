@@ -105,58 +105,91 @@ const fabricColors =
   }, 
   {
     color: "#dbd4c9",
-    name: "French Quarter 03",
+    name: "Beverly Hills 20",
   },
   {
     color: "#dbd4c9",
-    name: "Lake Shore Drive 02",
+    name: "Beverly Hills 29",
   },
   {
     color: "#dbd4c9",
-    name: "Mozart 02",
+    name: "Country Living 03",
   },
   {
     color: "#dbd4c9",
-    name: "Park Avenue 01",
+    name: "Country Living 06",
   },
   {
     color: "#dbd4c9",
-    name: "Park Avenue 02",
+    name: "French Quarter 06",
   },
   {
     color: "#dbd4c9",
-    name: "ROyal Mile 80",
+    name: "French Quarter 11",
   },
   {
     color: "#dbd4c9",
-    name: "Saint Germain 03",
+    name: "French Quarter 18",
   },
   {
     color: "#dbd4c9",
-    name: "Saint Laurent 03",
+    name: "Mozart 04",
   },
   {
     color: "#dbd4c9",
-    name: "Soft Ripple 01",
+    name: "Mozart 13",
   },
   {
     color: "#dbd4c9",
-    name: "Dublin 2536",
+    name: "Royal Mile 13",
   },
   {
     color: "#dbd4c9",
-    name: "Dublin 2537",
+    name: "Royal Mile 26",
+  },
+  {
+    color: "#dbd4c9",
+    name: "Saint Laurent 08",
+  },
+  {
+    color: "#dbd4c9",
+    name: "Saint Laurnet 11",
+  },
+  {
+    color: "#dbd4c9",
+    name: "Dublin 2532",
+  },
+  {
+    color: "#dbd4c9",
+    name: "Dublin 2534",
+  },
+  {
+    color: "#dbd4c9",
+    name: "Bremen 2111",
+  },
+  {
+    color: "#dbd4c9",
+    name: "Bremen 2110",
+  },
+  {
+    color: "#dbd4c9",
+    name: "Bremen 2103",
+  },
+  {
+    color: "#dbd4c9",
+    name: "Sevilla 2143",
   },
 ]]);
 
 const CustomizationContext = createContext({});
 export const CustomizationProvider = (props) => {
-  console.log(fabricColors);
+  
   const [material, setMaterial] = useState("fabric");
   const [sofaShade, setSofaShade] = useState(sofaShades[0]);
   const [activeFabric, setActiveFabric] = useState(fabricColors[0][1]);
+  const [activeTexture, setActiveTexture] = useState(fabricColors[0][1][0].name);
   const [fabricColor, setFabricColor] = useState("#ede7dd");
-  console.log(fabricColors);
+  
   return (
     <CustomizationContext.Provider
       value={{
@@ -170,6 +203,8 @@ export const CustomizationProvider = (props) => {
         setFabricColor,
         activeFabric,
         setActiveFabric,
+        activeTexture,
+        setActiveTexture,
       }}
     >
       {props.children}

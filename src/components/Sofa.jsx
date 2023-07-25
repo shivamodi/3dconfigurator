@@ -13,8 +13,8 @@ import { useCustomization } from "../contexts/Customization";
  */
 
 function Sofa(props) {
-  const { nodes, materials } = useGLTF("./models/sectional.gltf");
-  const { material, sofaShade, activeFabric, fabricColor } = useCustomization();
+  const { nodes, materials } = useGLTF("./models/cornersec.gltf");
+  const { material, sofaShade, activeFabric, activeTexture, fabricColor } = useCustomization();
 
   const leatherTextureProps = useTexture({
     // map: "./textures/leather/Leather_008_Base Color.jpg",
@@ -24,10 +24,10 @@ function Sofa(props) {
   });
 
   const fabricTextureProps = useTexture({
-    map: "./textures/fabric/beverly-hills-02.jpg",
-    normalMap: "./textures/fabric/beverly-hills-02-Normal.jpg",
-    roughnessMap: "./textures/fabric/beverly-hills-02-Roughness.jpg",
-    aoMap: "./textures/fabric/beverly-hills-02-AO.jpg",
+    map: "./textures/fabric/"+activeTexture.toLowerCase().replace(" ", "-")+".jpg",
+    //normalMap: "./textures/fabric/beverly-hills-02-Normal.jpg",
+    //roughnessMap: "./textures/fabric/beverly-hills-02-Roughness.jpg",
+    aoMap: "./textures/fabric/"+activeTexture.slice(0,-2)+"-AO.jpg",
   });
 
   // leatherTextureProps.map.repeat.set(3, 3);
@@ -44,15 +44,15 @@ function Sofa(props) {
     THREE.RepeatWrapping;
  
   fabricTextureProps.map.repeat.set(3, 3);
-  fabricTextureProps.normalMap.repeat.set(3, 3);
-  fabricTextureProps.roughnessMap.repeat.set(3, 3);
+  //fabricTextureProps.normalMap.repeat.set(3, 3);
+  //fabricTextureProps.roughnessMap.repeat.set(3, 3);
   fabricTextureProps.aoMap.repeat.set(3, 3);
   fabricTextureProps.map.wrapS = fabricTextureProps.map.wrapT =
     THREE.RepeatWrapping;
-  fabricTextureProps.normalMap.wrapS = fabricTextureProps.normalMap.wrapT =
-    THREE.RepeatWrapping;
-  fabricTextureProps.roughnessMap.wrapS =
-    fabricTextureProps.roughnessMap.wrapT = THREE.RepeatWrapping;
+  //fabricTextureProps.normalMap.wrapS = fabricTextureProps.normalMap.wrapT =
+    //THREE.RepeatWrapping;
+  //fabricTextureProps.roughnessMap.wrapS =
+ //   fabricTextureProps.roughnessMap.wrapT = THREE.RepeatWrapping;
   fabricTextureProps.aoMap.wrapS = fabricTextureProps.aoMap.wrapT =
     THREE.RepeatWrapping;
   return (
@@ -70,7 +70,7 @@ function Sofa(props) {
           {...(material === "leather"
             ? leatherTextureProps
             : fabricTextureProps)}
-            color="#413328"
+            color="#000"
         />
       </mesh>
       <mesh geometry={nodes.Cylinder001.geometry} castShadow>
@@ -105,4 +105,4 @@ function Sofa(props) {
 
 export default Sofa;
 
-useGLTF.preload("./models/sectional.gltf");
+useGLTF.preload("./models/cornersec.gltf");

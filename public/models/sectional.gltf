@@ -1,1 +1,58 @@
-{"asset":{"version":"2.0","generator":"babylon.js glTF exporter for 3dsmax 2022 v20230608.5"},"scene":0,"scenes":[{"nodes":[0,1,2,3,4]}],"nodes":[{"mesh":0,"name":"Box003"},{"mesh":1,"name":"Cylinder001"},{"mesh":2,"name":"Cylinder002"},{"mesh":3,"name":"Object024"},{"mesh":4,"name":"Box008"}],"meshes":[{"primitives":[{"attributes":{"POSITION":1,"TANGENT":2,"NORMAL":3,"TEXCOORD_0":4},"indices":0,"material":0}],"name":"Box003"},{"primitives":[{"attributes":{"POSITION":6,"TANGENT":7,"NORMAL":8,"TEXCOORD_0":9},"indices":5,"material":1}],"name":"Cylinder001"},{"primitives":[{"attributes":{"POSITION":11,"TANGENT":12,"NORMAL":13,"TEXCOORD_0":14},"indices":10,"material":1}],"name":"Cylinder002"},{"primitives":[{"attributes":{"POSITION":16,"TANGENT":17,"NORMAL":18,"TEXCOORD_0":19},"indices":15,"material":0}],"name":"Object024"},{"primitives":[{"attributes":{"POSITION":21,"TANGENT":22,"NORMAL":23,"TEXCOORD_0":24},"indices":20,"material":2}],"name":"Box008"}],"accessors":[{"bufferView":0,"componentType":5123,"count":157683,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"componentType":5126,"count":28137,"max":[1.64570081,0.462472975,1.56164145],"min":[-1.5497396,-0.161984041,-1.65049374],"type":"VEC3","name":"accessorPositions"},{"bufferView":2,"componentType":5126,"count":28137,"type":"VEC4","name":"accessorTangents"},{"bufferView":1,"byteOffset":337644,"componentType":5126,"count":28137,"type":"VEC3","name":"accessorNormals"},{"bufferView":3,"componentType":5126,"count":28137,"type":"VEC2","name":"accessorUVs"},{"bufferView":0,"byteOffset":315368,"componentType":5123,"count":7080,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"byteOffset":675288,"componentType":5126,"count":1490,"max":[1.54266834,-0.174649671,1.44243741],"min":[0.807223439,-0.367920548,-1.547608],"type":"VEC3","name":"accessorPositions"},{"bufferView":2,"byteOffset":450192,"componentType":5126,"count":1490,"type":"VEC4","name":"accessorTangents"},{"bufferView":1,"byteOffset":693168,"componentType":5126,"count":1490,"type":"VEC3","name":"accessorNormals"},{"bufferView":3,"byteOffset":225096,"componentType":5126,"count":1490,"type":"VEC2","name":"accessorUVs"},{"bufferView":0,"byteOffset":329528,"componentType":5123,"count":4248,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"byteOffset":711048,"componentType":5126,"count":894,"max":[0.678841949,-0.17464976,-0.84661746],"min":[-1.43053508,-0.367920548,-1.54746091],"type":"VEC3","name":"accessorPositions"},{"bufferView":2,"byteOffset":474032,"componentType":5126,"count":894,"type":"VEC4","name":"accessorTangents"},{"bufferView":1,"byteOffset":721776,"componentType":5126,"count":894,"type":"VEC3","name":"accessorNormals"},{"bufferView":3,"byteOffset":237016,"componentType":5126,"count":894,"type":"VEC2","name":"accessorUVs"},{"bufferView":0,"byteOffset":338024,"componentType":5123,"count":243198,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"byteOffset":732504,"componentType":5126,"count":43569,"max":[1.47650206,0.457261,1.4552722],"min":[-1.42344725,0.08344103,-1.47250235],"type":"VEC3","name":"accessorPositions"},{"bufferView":2,"byteOffset":488336,"componentType":5126,"count":43569,"type":"VEC4","name":"accessorTangents"},{"bufferView":1,"byteOffset":1255332,"componentType":5126,"count":43569,"type":"VEC3","name":"accessorNormals"},{"bufferView":3,"byteOffset":244168,"componentType":5126,"count":43569,"type":"VEC2","name":"accessorUVs"},{"bufferView":0,"byteOffset":824420,"componentType":5123,"count":13248,"type":"SCALAR","name":"accessorIndices"},{"bufferView":1,"byteOffset":1778160,"componentType":5126,"count":2658,"max":[1.59815657,-0.151595384,1.49023008],"min":[-1.47832775,-0.188058123,-1.60294878],"type":"VEC3","name":"accessorPositions"},{"bufferView":2,"byteOffset":1185440,"componentType":5126,"count":2658,"type":"VEC4","name":"accessorTangents"},{"bufferView":1,"byteOffset":1810056,"componentType":5126,"count":2658,"type":"VEC3","name":"accessorNormals"},{"bufferView":3,"byteOffset":592720,"componentType":5126,"count":2658,"type":"VEC2","name":"accessorUVs"}],"bufferViews":[{"buffer":0,"byteLength":850916,"name":"bufferViewScalar"},{"buffer":0,"byteOffset":850916,"byteLength":1841952,"byteStride":12,"name":"bufferViewFloatVec3"},{"buffer":0,"byteOffset":2692868,"byteLength":1227968,"byteStride":16,"name":"bufferViewFloatVec4"},{"buffer":0,"byteOffset":3920836,"byteLength":613984,"byteStride":8,"name":"bufferViewFloatVec2"}],"buffers":[{"uri":"sectional.bin","byteLength":4534820}],"materials":[{"pbrMetallicRoughness":{"baseColorFactor":[0.5,0.5,0.5,1.0],"metallicFactor":0.0,"roughnessFactor":0.0},"doubleSided":true,"name":"BODY","extras":{"babylonSeparateCullingPass":false}},{"pbrMetallicRoughness":{"baseColorFactor":[0.5,0.5,0.5,1.0],"metallicFactor":0.0,"roughnessFactor":0.0},"doubleSided":true,"name":"METAL","extras":{"babylonSeparateCullingPass":false}},{"pbrMetallicRoughness":{"baseColorFactor":[0.5,0.5,0.5,1.0],"metallicFactor":0.0,"roughnessFactor":0.0},"doubleSided":true,"name":"WOOD","extras":{"babylonSeparateCullingPass":false}}]}
+{
+    "asset": { "version": "2.0", "generator": "babylon.js glTF exporter for 3dsmax 2022 v20230608.5" },
+    "scene": 0,
+    "scenes": [{ "nodes": [0, 1, 2, 3, 4] }],
+    "nodes": [
+        { "mesh": 0, "name": "Box003" },
+        { "mesh": 1, "name": "Cylinder001" },
+        { "mesh": 2, "name": "Cylinder002" },
+        { "mesh": 3, "name": "Object024" },
+        { "mesh": 4, "name": "Box008" }
+    ],
+    "meshes": [
+        { "primitives": [{ "attributes": { "POSITION": 1, "TANGENT": 2, "NORMAL": 3, "TEXCOORD_0": 4 }, "indices": 0, "material": 0 }], "name": "Box003" },
+        { "primitives": [{ "attributes": { "POSITION": 6, "TANGENT": 7, "NORMAL": 8, "TEXCOORD_0": 9 }, "indices": 5, "material": 1 }], "name": "Cylinder001" },
+        { "primitives": [{ "attributes": { "POSITION": 11, "TANGENT": 12, "NORMAL": 13, "TEXCOORD_0": 14 }, "indices": 10, "material": 1 }], "name": "Cylinder002" },
+        { "primitives": [{ "attributes": { "POSITION": 16, "TANGENT": 17, "NORMAL": 18, "TEXCOORD_0": 19 }, "indices": 15, "material": 0 }], "name": "Object024" },
+        { "primitives": [{ "attributes": { "POSITION": 21, "TANGENT": 22, "NORMAL": 23, "TEXCOORD_0": 24 }, "indices": 20, "material": 2 }], "name": "Box008" }
+    ],
+    "accessors": [
+        { "bufferView": 0, "componentType": 5123, "count": 157683, "type": "SCALAR", "name": "accessorIndices" },
+        { "bufferView": 1, "componentType": 5126, "count": 28137, "max": [1.64570081, 0.462472975, 1.56164145], "min": [-1.5497396, -0.161984041, -1.65049374], "type": "VEC3", "name": "accessorPositions" },
+        { "bufferView": 2, "componentType": 5126, "count": 28137, "type": "VEC4", "name": "accessorTangents" },
+        { "bufferView": 1, "byteOffset": 337644, "componentType": 5126, "count": 28137, "type": "VEC3", "name": "accessorNormals" },
+        { "bufferView": 3, "componentType": 5126, "count": 28137, "type": "VEC2", "name": "accessorUVs" },
+        { "bufferView": 0, "byteOffset": 315368, "componentType": 5123, "count": 7080, "type": "SCALAR", "name": "accessorIndices" },
+        { "bufferView": 1, "byteOffset": 675288, "componentType": 5126, "count": 1490, "max": [1.54266834, -0.174649671, 1.44243741], "min": [0.807223439, -0.367920548, -1.547608], "type": "VEC3", "name": "accessorPositions" },
+        { "bufferView": 2, "byteOffset": 450192, "componentType": 5126, "count": 1490, "type": "VEC4", "name": "accessorTangents" },
+        { "bufferView": 1, "byteOffset": 693168, "componentType": 5126, "count": 1490, "type": "VEC3", "name": "accessorNormals" },
+        { "bufferView": 3, "byteOffset": 225096, "componentType": 5126, "count": 1490, "type": "VEC2", "name": "accessorUVs" },
+        { "bufferView": 0, "byteOffset": 329528, "componentType": 5123, "count": 4248, "type": "SCALAR", "name": "accessorIndices" },
+        { "bufferView": 1, "byteOffset": 711048, "componentType": 5126, "count": 894, "max": [0.678841949, -0.17464976, -0.84661746], "min": [-1.43053508, -0.367920548, -1.54746091], "type": "VEC3", "name": "accessorPositions" },
+        { "bufferView": 2, "byteOffset": 474032, "componentType": 5126, "count": 894, "type": "VEC4", "name": "accessorTangents" },
+        { "bufferView": 1, "byteOffset": 721776, "componentType": 5126, "count": 894, "type": "VEC3", "name": "accessorNormals" },
+        { "bufferView": 3, "byteOffset": 237016, "componentType": 5126, "count": 894, "type": "VEC2", "name": "accessorUVs" },
+        { "bufferView": 0, "byteOffset": 338024, "componentType": 5123, "count": 243198, "type": "SCALAR", "name": "accessorIndices" },
+        { "bufferView": 1, "byteOffset": 732504, "componentType": 5126, "count": 43569, "max": [1.47650206, 0.457261, 1.4552722], "min": [-1.42344725, 0.08344103, -1.47250235], "type": "VEC3", "name": "accessorPositions" },
+        { "bufferView": 2, "byteOffset": 488336, "componentType": 5126, "count": 43569, "type": "VEC4", "name": "accessorTangents" },
+        { "bufferView": 1, "byteOffset": 1255332, "componentType": 5126, "count": 43569, "type": "VEC3", "name": "accessorNormals" },
+        { "bufferView": 3, "byteOffset": 244168, "componentType": 5126, "count": 43569, "type": "VEC2", "name": "accessorUVs" },
+        { "bufferView": 0, "byteOffset": 824420, "componentType": 5123, "count": 13248, "type": "SCALAR", "name": "accessorIndices" },
+        { "bufferView": 1, "byteOffset": 1778160, "componentType": 5126, "count": 2658, "max": [1.59815657, -0.151595384, 1.49023008], "min": [-1.47832775, -0.188058123, -1.60294878], "type": "VEC3", "name": "accessorPositions" },
+        { "bufferView": 2, "byteOffset": 1185440, "componentType": 5126, "count": 2658, "type": "VEC", "name": "accessorTangents" },
+        { "bufferView": 1, "byteOffset": 1810056, "componentType": 5126, "count": 2658, "type": "VEC3", "name": "accessorNormals" },
+        { "bufferView": 3, "byteOffset": 592720, "componentType": 5126, "count": 2658, "type": "VEC2", "name": "accessorUVs" }
+    ],
+    "bufferViews": [
+        { "buffer": 0, "byteLength": 850916, "name": "bufferViewScalar" },
+        { "buffer": 0, "byteOffset": 850916, "byteLength": 1841952, "byteStride": 12, "name": "bufferViewFloatVec3" },
+        { "buffer": 0, "byteOffset": 2692868, "byteLength": 1227968, "byteStride": 16, "name": "bufferViewFloatVec4" },
+        { "buffer": 0, "byteOffset": 3920836, "byteLength": 613984, "byteStride": 8, "name": "bufferViewFloatVec2" }
+    ],
+    "buffers": [{ "uri": "sectional.bin", "byteLength": 4534820 }],
+    "materials": [
+        { "pbrMetallicRoughness": { "baseColorFactor": [0.5, 0.5, 0.5, 1.0], "metallicFactor": 0.0, "roughnessFactor": 0.0 }, "doubleSided": false, "name": "BODY", "extras": { "babylonSeparateCullingPass": false } },
+        { "pbrMetallicRoughness": { "baseColorFactor": [0.5, 0.5, 0.5, 1.0], "metallicFactor": 0.0, "roughnessFactor": 0.0 }, "doubleSided": true, "name": "METAL", "extras": { "babylonSeparateCullingPass": false } },
+        { "pbrMetallicRoughness": { "baseColorFactor": [0.5, 0.5, 0.5, 1.0], "metallicFactor": 0.0, "roughnessFactor": 0.0 }, "doubleSided": true, "name": "WOOD", "extras": { "babylonSeparateCullingPass": false } }
+    ]
+}

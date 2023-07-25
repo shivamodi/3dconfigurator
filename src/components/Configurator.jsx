@@ -13,6 +13,7 @@ const Configurator = () => {
     setFabricColor,
     activeFabric,
     setActiveFabric,
+    setActiveTexture,
   } = useCustomization();
 
   return (
@@ -63,7 +64,7 @@ const Configurator = () => {
               className={`item ${
                 item.color === sofaShade.color ? "item--active" : ""
               }`}
-              onClick={() => setFabricColor(item)}
+              onClick={() => { setFabricColor(item); setActiveTexture(item.name); }}
             >
               <div
                 className="item__dot"

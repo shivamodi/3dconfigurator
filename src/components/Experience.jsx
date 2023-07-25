@@ -14,7 +14,7 @@ const Experience = () => {
         global
         rotation={[Math.PI / 8, Math.PI / 4, 0]}
       >
-        <Stage environment="city" intensity={0.6} castShadow={false}>
+        <Stage environment={null} intensity={1}  castShadow={false}>
           <Sofa />
         </Stage>
         <mesh rotation={[-Math.PI / 2, 0, 0]} position-y={-2}>
