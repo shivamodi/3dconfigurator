@@ -35,7 +35,7 @@ const fabricColors =
   Array(["#dbd4c9", [ 
   {
     color: "#d4cdc2",
-    name: "Boucle White",
+    name: "Boucle White 01",
   },
   {
     color: "#ede2c6",
@@ -104,79 +104,83 @@ const fabricColors =
     name: "Beverly Hills 15",
   }, 
   {
-    color: "#dbd4c9",
+    color: "#584f48",
     name: "Beverly Hills 20",
   },
   {
-    color: "#dbd4c9",
+    color: "#221213",
     name: "Beverly Hills 29",
   },
   {
-    color: "#dbd4c9",
+    color: "#d0cabc",
     name: "Country Living 03",
   },
   {
-    color: "#dbd4c9",
+    color: "#b8aaa1",
     name: "Country Living 06",
   },
   {
-    color: "#dbd4c9",
+    color: "#d5bfa7",
     name: "French Quarter 06",
   },
   {
-    color: "#dbd4c9",
+    color: "#d5bfa7",
     name: "French Quarter 11",
   },
   {
-    color: "#dbd4c9",
+    color: "#7e6c64",
     name: "French Quarter 18",
   },
   {
-    color: "#dbd4c9",
+    color: "#cbbead",
     name: "Mozart 04",
   },
   {
-    color: "#dbd4c9",
+    color: "#b09d8e",
     name: "Mozart 13",
   },
   {
-    color: "#dbd4c9",
+    color: "#a99b92",
     name: "Royal Mile 13",
   },
   {
-    color: "#dbd4c9",
+    color: "#473e3c",
     name: "Royal Mile 26",
   },
   {
-    color: "#dbd4c9",
+    color: "#aea190",
     name: "Saint Laurent 08",
   },
   {
-    color: "#dbd4c9",
+    color: "#8B7C63",
     name: "Saint Laurnet 11",
   },
   {
-    color: "#dbd4c9",
+    color: "#b9ac9c",
     name: "Dublin 2532",
   },
   {
-    color: "#dbd4c9",
+    color: "#e0d3cb",
     name: "Dublin 2534",
   },
   {
-    color: "#dbd4c9",
+    color: "#c9b69f",
     name: "Bremen 2111",
   },
   {
-    color: "#dbd4c9",
+    color: "#937057",
     name: "Bremen 2110",
   },
   {
-    color: "#dbd4c9",
+    color: "#665448",
+    name: "Bremen 2109",
+  },
+  {
+    color: "#af6f47",
     name: "Bremen 2103",
   },
   {
-    color: "#dbd4c9",
+    color: "#cfbea8",
     name: "Sevilla 2143",
   },
 ]]);

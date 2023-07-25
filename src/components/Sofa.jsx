@@ -24,10 +24,10 @@ function Sofa(props) {
   });
 
   const fabricTextureProps = useTexture({
-    map: "./textures/fabric/"+activeTexture.toLowerCase().replace(" ", "-")+".jpg",
-    //normalMap: "./textures/fabric/beverly-hills-02-Normal.jpg",
-    //roughnessMap: "./textures/fabric/beverly-hills-02-Roughness.jpg",
-    aoMap: "./textures/fabric/"+activeTexture.slice(0,-2)+"-AO.jpg",
+    map: "./textures/fabric/"+activeTexture.replace(/\s+/g, '-').toLowerCase()+".jpg",
+    //normalMap: "./textures/fabric/"+activeTexture.toLowerCase().replace(" ", "-")+"-normal.jpg",
+    //roughnessMap: "./textures/fabric/"+activeTexture.toLowerCase().replace(" ", "-")+"-roughness.jpg",
+    aoMap: "./textures/fabric/"+activeTexture.replace(/[0-9]{1,2}/, '').replace(/\s+/g, '-').toLowerCase()+"AO.jpg",
   });
 
   // leatherTextureProps.map.repeat.set(3, 3);
