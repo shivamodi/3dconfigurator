@@ -1,0 +1,279 @@
+{
+  "asset": {
+    "generator": "sayduck-legacy-pipeline-debug",
+    "version": "2.0"
+  },
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9986,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "images": [
+    {
+      "name": "albedo",
+      "uri": "https://cdn.sayduck.io/a/shared_assets/files/006/106/347/5e715432c17721d0fefafca0bf9d85243041609faff11c74b305580b70e72503-optimised_jpg.jpg"
+    },
+    {
+      "name": "occlusion",
+      "uri": "https://cdn.sayduck.io/a/shared_assets/files/006/702/364/883e8ecc9efcbfa4ec95f323a56517973b7a5c6ca6a54f280c4c276a25cdf02a-optimised_jpg.jpg"
+    }
+  ],
+  "textures": [
+    {
+      "name": "albedo",
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "name": "occlusion",
+      "sampler": 0,
+      "source": 1
+    }
+  ],
+  "materials": [
+    {
+      "name": "Material__6_material_0",
+      "alphaMode": "OPAQUE",
+      "doubleSided": false,
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "roughnessFactor": 0.92,
+        "metallicFactor": 0.88,
+        "baseColorTexture": {
+          "index": 0,
+          "extensions": {
+            "KHR_texture_transform": {
+              "scale": [
+                12,
+                12
+              ],
+              "offset": [
+                0,
+                0
+              ],
+              "rotation": 0
+            }
+          }
+        }
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "extras": {
+        "sayduck": {
+          "uuid": "4ef759c0-a45f-013b-e1e5-0eb7f066e001",
+          "skipThreejsGltfLoaderCache": false
+        }
+      },
+      "occlusionTexture": {
+        "index": 1,
+        "strength": 1
+      }
+    }
+  ],
+  "buffers": [
+    {
+      "name": "buffer",
+      "byteLength": 47104,
+      "uri": "https://cdn.sayduck.io/a/shared_assets/files/006/701/709/f5a1b779969862a4679324f3f3a4f20628d71d03611eb1d3b05720ff59bd6504-original.bin"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 47102
+    }
+  ],
+  "accessors": [
+    {
+      "componentType": 5125,
+      "count": 81528,
+      "type": "SCALAR",
+      "min": [
+        0
+      ],
+      "max": [
+        81527
+      ]
+    },
+    {
+      "componentType": 5126,
+      "count": 14597,
+      "max": [
+        20.130590118311297,
+        4.158255257720649,
+        10.427433712283285
+      ],
+      "min": [
+        -20.130590118311297,
+        -4.153350032709492,
+        -10.420351661585224
+      ],
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 14597,
+      "max": [
+        1.007843137254902,
+        1.007843137254902,
+        1.007843137254902
+      ],
+      "min": [
+        -1.007843137254902,
+        -1.007843137254902,
+        -1.007843137254902
+      ],
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 14597,
+      "max": [
+        1.0009775171065494,
+        1.0009658876751875
+      ],
+      "min": [
+        -0.0009775171065493646,
+        0.005853473207934278
+      ],
+      "type": "VEC2"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "mode": 4,
+          "attributes": {
+            "POSITION": 1,
+            "NORMAL": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 3
+          },
+          "material": 0,
+          "indices": 0,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 0,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2,
+                "TEXCOORD_1": 3
+              }
+            }
+          },
+          "extras": {
+            "sayduck": {
+              "uuid": "18bbcc70-a463-013b-b0d0-4e93b6bed2f9"
+            }
+          }
+        }
+      ],
+      "extras": {
+        "sayduck": {
+          "uuid": "18bbcc70-a463-013b-b0d0-4e93b6bed2f9",
+          "translationOffset": [
+            8.357387065887451,
+            4.106861799955368,
+            5.203169584274292
+          ],
+          "rotationOffset": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scaleOffset": [
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Cylinder016",
+      "mesh": 0,
+      "translation": [
+        8.357387065887451,
+        4.106861799955368,
+        5.203169584274292
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "extras": {
+        "sayduck": {
+          "uuid": "4db97090-a45f-013b-b76c-0eb7f066e001",
+          "ignoredInitially": false,
+          "shadowplaneGid": "TWVzaC0xOGJiY2M3MC1hNDYzLTAxM2ItYjBkMC00ZTkzYjZiZWQyZjk="
+        }
+      }
+    },
+    {
+      "name": "8283383d7c642a1646bfd26ee6d0ae2c20221203-5-i6e44w",
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "extras": {
+        "sayduck": {
+          "uuid": "502b6260-a45f-013b-14a2-0eb7f066e001"
+        }
+      },
+      "children": [
+        0
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        1
+      ]
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_draco_mesh_compression",
+    "KHR_texture_transform"
+  ],
+  "extensionsRequired": [
+    "KHR_draco_mesh_compression",
+    "KHR_texture_transform"
+  ]
+}
