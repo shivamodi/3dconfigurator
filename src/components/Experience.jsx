@@ -12,13 +12,12 @@ const Experience = () => {
       <PresentationControls
         speed={1.5}
         global
-        rotation={[Math.PI / 8, Math.PI / 4, 0]}
+        rotation={[0, 0, 0]}
       >
         <Stage environment={null} intensity={1}  castShadow={false}>
           <Sofa />
         </Stage>
         <mesh rotation={[-Math.PI / 2, 0, 0]} position-y={-2}>
-          <planeGeometry args={[170, 170]} />
           <MeshReflectorMaterial
             blur={[300, 100]}
             resolution={2048}
@@ -32,7 +31,12 @@ const Experience = () => {
           />
         </mesh>
       </PresentationControls>
-      <OrbitControls />
+      <OrbitControls 
+        minAzimuthAngle={-Math.PI / 8}
+        maxAzimuthAngle={Math.PI / 8}
+        minPolarAngle={Math.PI / 2}
+        maxPolarAngle={Math.PI - Math.PI / 2}
+      />
     </>
   );
 };

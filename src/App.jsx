@@ -7,7 +7,7 @@ import Configurator from "./components/Configurator";
 import { CustomizationProvider } from "./contexts/Customization";
 
 function App() {
-  
+
   return (
     <CustomizationProvider>
       <div className="App">
