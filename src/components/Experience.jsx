@@ -23,19 +23,21 @@ const Experience = () => {
             resolution={2048}
             mixBlur={1}
             mixStrength={40}
-            roughness={1}
-            depthScale={1.2}
-            minDepthThreshold={0.4}
-            maxDepthThreshold={1.4}
-            metalness={0.5}
+            roughness={0}
+            depthScale={0}
+            minDepthThreshold={0}
+            maxDepthThreshold={0}
+            metalness={0}
           />
         </mesh>
       </PresentationControls>
       <OrbitControls 
-        minAzimuthAngle={-Math.PI / 8}
-        maxAzimuthAngle={Math.PI / 8}
-        minPolarAngle={Math.PI / 2}
-        maxPolarAngle={Math.PI - Math.PI / 2}
+        minAzimuthAngle={Math.PI}
+        maxAzimuthAngle={0}
+        minPolarAngle={Math.PI/4}
+        maxPolarAngle={Math.PI/2}
+        autoRotate={true}
+        rotateSpeed={0.5}
       />
     </>
   );

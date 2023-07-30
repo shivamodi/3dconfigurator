@@ -13,6 +13,13 @@ import {useFrame} from "@react-three/fiber";
  ** CHAIR MATERIALS
  */
 
+ const tryRequire = (path) => {
+  try {
+   return require(`${path}`);
+  } catch (err) {
+   return null;
+  }
+};
 
 function Sofa(props) {
   const searchParams = new URLSearchParams(document.location.search);
@@ -20,7 +27,7 @@ function Sofa(props) {
   
   const { nodes, materials } = useGLTF("./models/"+param1+".gltf");
   const { material, sofaShade, activeFabric, activeTexture, fabricColor } = useCustomization();
-
+  var fabricTextureProps;
   const leatherTextureProps = useTexture({
     // map: "./textures/leather/Leather_008_Base Color.jpg",
     normalMap: "./textures/leather/Leather_008_Normal.jpg",
@@ -28,13 +35,41 @@ function Sofa(props) {
     aoMap: "./textures/leather/Leather_008_Ambient Occlusion.jpg", 
   });
 
-  const fabricTextureProps = useTexture({
+  const fabricTexturePropsAO = tryRequire("./textures/fabric/"+activeTexture.replace(/[0-9]{1,2}/, '').replace(/\s+/g, '-').toLowerCase()+"AO.jpg") ? true 
+  : false;
+
+
+  const fabricTexturePropsNormal = tryRequire("./textures/fabric/"+activeTexture.replace(/[0-9]{1,2}/, '').replace(/\s+/g, '-').toLowerCase()+"Normal.jpg") ? true 
+  : false;
+
+  
+  const fabricTexturePropsRoughness = tryRequire("./textures/fabric/"+activeTexture.replace(/[0-9]{1,2}/, '').replace(/\s+/g, '-').toLowerCase()+"Roughness.jpg") ? true 
+  : false;
+
+  if(fabricTexturePropsAO===true){
+
+    fabricTextureProps = useTexture({
+      map: "./textures/fabric/"+activeTexture.replace(/\s+/g, '-').toLowerCase()+".jpg",
+      //normalMap: "./textures/fabric/"+activeTexture.toLowerCase().replace(" ", "-")+"-normal.jpg",
+      //roughnessMap: "./textures/fabric/"+activeTexture.toLowerCase().replace(" ", "-")+"-roughness.jpg",
+      aoMap: "./textures/fabric/"+activeTexture.replace(/[0-9]{1,2}/, '').replace(/\s+/g, '-').toLowerCase()+"AO.jpg",
+    });
+  }else{
+    
+  fabricTextureProps = useTexture({
     map: "./textures/fabric/"+activeTexture.replace(/\s+/g, '-').toLowerCase()+".jpg",
     //normalMap: "./textures/fabric/"+activeTexture.toLowerCase().replace(" ", "-")+"-normal.jpg",
     //roughnessMap: "./textures/fabric/"+activeTexture.toLowerCase().replace(" ", "-")+"-roughness.jpg",
-    aoMap: "./textures/fabric/"+activeTexture.replace(/[0-9]{1,2}/, '').replace(/\s+/g, '-').toLowerCase()+"AO.jpg",
+    //aoMap: "./textures/fabric/"+activeTexture.replace(/[0-9]{1,2}/, '').replace(/\s+/g, '-').toLowerCase()+"AO.jpg",
   });
+  }
 
+  const woodTextureProps = useTexture({
+    map: "./textures/fabric/WOOD.jpg",
+    //normalMap: "./textures/fabric/"+activeTexture.toLowerCase().replace(" ", "-")+"-normal.jpg",
+    //roughnessMap: "./textures/fabric/"+activeTexture.toLowerCase().replace(" ", "-")+"-roughness.jpg",
+    //aoMap: "./textures/fabric/AO.jpg",
+  });
   // leatherTextureProps.map.repeat.set(3, 3);
   leatherTextureProps.normalMap.repeat.set(3, 3);
   leatherTextureProps.roughnessMap.repeat.set(3, 3);
@@ -48,18 +83,39 @@ function Sofa(props) {
   leatherTextureProps.aoMap.wrapS = leatherTextureProps.aoMap.wrapT =
     THREE.RepeatWrapping;
  
-  fabricTextureProps.map.repeat.set(15, 15);
-  //fabricTextureProps.normalMap.repeat.set(3, 3);
-  //fabricTextureProps.roughnessMap.repeat.set(3, 3);
-  fabricTextureProps.aoMap.repeat.set(15, 15);
-  fabricTextureProps.map.wrapS = fabricTextureProps.map.wrapT =
+
+    fabricTextureProps.map.repeat.set(15, 15);
+    fabricTextureProps.map.wrapS = fabricTextureProps.map.wrapT =
+      THREE.RepeatWrapping;
+  if(fabricTexturePropsNormal===true){
+    fabricTextureProps.normalMap.repeat.set(15, 15);
+ fabricTextureProps.normalMap.wrapS = fabricTextureProps.normalMap.wrapT =
     THREE.RepeatWrapping;
-  //fabricTextureProps.normalMap.wrapS = fabricTextureProps.normalMap.wrapT =
-    //THREE.RepeatWrapping;
-  //fabricTextureProps.roughnessMap.wrapS =
- //   fabricTextureProps.roughnessMap.wrapT = THREE.RepeatWrapping;
+  }
+  if(fabricTexturePropsRoughness===true){
+    fabricTextureProps.roughnessMap.repeat.set(15, 15);
+ fabricTextureProps.roughnessMap.wrapS =
+    fabricTextureProps.roughnessMap.wrapT = THREE.RepeatWrapping;
+  }
+ if(fabricTexturePropsAO===true){
+  fabricTextureProps.aoMap.repeat.set(15, 15);
   fabricTextureProps.aoMap.wrapS = fabricTextureProps.aoMap.wrapT =
     THREE.RepeatWrapping;
+ }
+
+    woodTextureProps.map.repeat.set(15, 15);
+  //woodTextureProps.normalMap.repeat.set(3, 3);
+  //woodTextureProps.roughnessMap.repeat.set(3, 3);
+ // woodTextureProps.aoMap.repeat.set(15, 15);
+  woodTextureProps.map.wrapS = woodTextureProps.map.wrapT =
+    THREE.RepeatWrapping;
+  //woodTextureProps.normalMap.wrapS = woodTextureProps.normalMap.wrapT =
+    //THREE.RepeatWrapping;
+  //woodTextureProps.roughnessMap.wrapS =
+ //   woodTextureProps.roughnessMap.wrapT = THREE.RepeatWrapping;
+ // woodTextureProps.aoMap.wrapS = woodTextureProps.aoMap.wrapT =
+  //  THREE.RepeatWrapping;
+
   const objec = nodes;
   const nodebrowse = Object.values(objec);
   
@@ -67,25 +123,28 @@ function Sofa(props) {
     <group {...props} dispose={null}>
       {nodebrowse.map((obj, i) => { 
 
-        if(i!==10){
-
           console.log(nodes[nodebrowse[i].name]);
 
 
           return(<mesh key={i} geometry={nodes[nodebrowse[i].name].geometry} castShadow={false}>
-            <meshStandardMaterial
+            <meshStandardMaterial 
             {...(material === "leather"
               ? leatherTextureProps
-              : fabricTextureProps)}
+              : (
+                (nodes[nodebrowse[i].name]["material"]["name"] !== "WOOD")?
+                fabricTextureProps : woodTextureProps))}
               color=
-              {((typeof nodes[nodebrowse[i].name]["material"] != 'undefined') && (nodes[nodebrowse[i].name]["material"] !== "") && (nodes[nodebrowse[i].name]["material"]["name"] !== "LEGS") && (nodes[nodebrowse[i].name]["material"]["name"] !== "METAL")
-              ? fabricColor.color
-              : "black")}
-            
+              {((typeof nodes[nodebrowse[i].name]["material"] != 'undefined') && (nodes[nodebrowse[i].name]["material"] !== "") && (!nodes[nodebrowse[i].name]["material"]["name"].toLowerCase().includes("leg")) && (nodes[nodebrowse[i].name]["material"]["name"] !== "BOTTOM") && (nodes[nodebrowse[i].name]["material"]["name"] !== "WOOD") && (nodes[nodebrowse[i].name]["material"]["name"] !== "LEATHER") && (nodes[nodebrowse[i].name]["material"]["name"] !== "METAL")
+              ? 
+              ""
+              : (
+              ((!nodes[nodebrowse[i].name]["material"]["name"].toLowerCase().includes("leg")) && (nodes[nodebrowse[i].name]["material"]["name"] !== "BOTTOM") && (nodes[nodebrowse[i].name]["material"]["name"] !== "METAL")) ? 
+              "#835d41" : "black"
+              )
+              )}
+            castShadow={false}
           />
         </mesh>)
-          
-        }
 
         })}
       

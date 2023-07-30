@@ -57,7 +57,7 @@ function Sofa(props) {
     THREE.RepeatWrapping;
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Box003.geometry} castShadow>
+      <mesh geometry={nodes.Box003.geometry} castShadow={false}>
         <meshStandardMaterial
           {...(material === "leather"
             ? leatherTextureProps
@@ -65,7 +65,7 @@ function Sofa(props) {
           color={sofaColor.color}
         />
       </mesh>
-      <mesh geometry={nodes.Box008.geometry} castShadow>
+      <mesh geometry={nodes.Box008.geometry} castShadow={false}>
         <meshStandardMaterial
           {...(material === "leather"
             ? leatherTextureProps
@@ -73,7 +73,7 @@ function Sofa(props) {
           color={sofaColor.color}
         />
       </mesh>
-      <mesh geometry={nodes.Cylinder001.geometry} castShadow>
+      <mesh geometry={nodes.Cylinder001.geometry} castShadow={false}>
         <meshStandardMaterial
           {...(material === "leather"
             ? leatherTextureProps
@@ -81,7 +81,7 @@ function Sofa(props) {
           color={sofaColor.color}
         />
       </mesh>
-      <mesh geometry={nodes.Cylinder002.geometry} castShadow>
+      <mesh geometry={nodes.Cylinder002.geometry} castShadow={false}>
         <meshStandardMaterial
           {...(material === "leather"
             ? leatherTextureProps
@@ -89,7 +89,7 @@ function Sofa(props) {
           color={sofaColor.color}
         />
       </mesh>
-      <mesh geometry={nodes.Object024.geometry} castShadow>
+      <mesh geometry={nodes.Object024.geometry} castShadow={false}>
         <meshStandardMaterial
           {...(material === "leather"
             ? leatherTextureProps

@@ -183,7 +183,92 @@ const fabricColors =
     color: "#cfbea8",
     name: "Sevilla 2143",
   },
-]]);
+]],
+["#335765", [  
+  {
+    color: "#dccdaf",
+    name: "Abbey Road 71",
+  },
+  {
+    color: "#7d674f",
+    name: "Abbey Road 76",
+  },
+  {
+    color: "#5c4d46",
+    name: "Beverly Hills 70",
+  }, 
+  {
+    color: "#584f48",
+    name: "Beverly Hills 72",
+  },]],
+  ["#774831", [  
+    {
+      color: "#dccdaf",
+      name: "Beverly Hills 59",
+    },
+    {
+      color: "#7d674f",
+      name: "French Quarter 53",
+    },
+    {
+      color: "#5c4d46",
+      name: "French Quarter 55",
+    }, 
+    {
+      color: "#584f48",
+      name: "Mozart 54",
+    },]],
+    ["#c58d80", [  
+      {
+        color: "#dccdaf",
+        name: "Abbey Road 51",
+      },
+      {
+        color: "#7d674f",
+        name: "Abbey Road 61",
+      },
+      {
+        color: "#5c4d46",
+        name: "Abbey Road 65",
+      }, 
+      {
+        color: "#584f48",
+        name: "Beverly Hills 62",
+      },]],
+      ["#b78638", [  
+        {
+          color: "#dccdaf",
+          name: "French Quarter 48",
+        },
+        {
+          color: "#7d674f",
+          name: "Mozart 35",
+        },
+        {
+          color: "#5c4d46",
+          name: "Mozart 48",
+        }, 
+        {
+          color: "#584f48",
+          name: "Mozart 49",
+        },]],
+        ["#575052", [  
+          {
+            color: "#dccdaf",
+            name: "Beverly Hills 84",
+          },
+          {
+            color: "#7d674f",
+            name: "Beverly Hills 85",
+          },
+          {
+            color: "#5c4d46",
+            name: "Beverly Hills 95",
+          }, 
+          {
+            color: "#584f48",
+            name: "Country Living 81",
+          },]]);
 
 const CustomizationContext = createContext({});
 export const CustomizationProvider = (props) => {
