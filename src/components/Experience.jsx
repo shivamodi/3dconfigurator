@@ -1,5 +1,4 @@
 import {
-  MeshReflectorMaterial,
   OrbitControls,
   PresentationControls,
   Stage,
@@ -10,35 +9,17 @@ const Experience = () => {
   return (
     <>
       <PresentationControls
+        enabled={true} // the controls can be disabled by setting this to false
+        global={false} // Spin globally or by dragging the model
+        cursor={true} // Whether to toggle cursor style on drag
+        snap={false} // Snap-back to center (can also be a spring config)
         speed={1.5}
-        global
-        rotation={[0, 0, 0]}
+        rotation={[0, 0, 0]} 
       >
-        <Stage environment={null} intensity={1}  castShadow={false}>
+        <Stage environment={null} intensity={1}  shadows="false">
           <Sofa />
         </Stage>
-        <mesh rotation={[-Math.PI / 2, 0, 0]} position-y={-2}>
-          <MeshReflectorMaterial
-            blur={[300, 100]}
-            resolution={2048}
-            mixBlur={1}
-            mixStrength={40}
-            roughness={0}
-            depthScale={0}
-            minDepthThreshold={0}
-            maxDepthThreshold={0}
-            metalness={0}
-          />
-        </mesh>
       </PresentationControls>
-      <OrbitControls 
-        minAzimuthAngle={Math.PI}
-        maxAzimuthAngle={0}
-        minPolarAngle={Math.PI/4}
-        maxPolarAngle={Math.PI/2}
-        autoRotate={true}
-        rotateSpeed={0.5}
-      />
     </>
   );
 };

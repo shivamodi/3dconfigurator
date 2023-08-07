@@ -22,6 +22,11 @@ import {useFrame} from "@react-three/fiber";
 };
 
 function Sofa(props) {
+  const ref = useRef()
+
+  useFrame((_, delta) => {
+    ref.current.rotation.y += 0.2 * delta
+  })
   const searchParams = new URLSearchParams(document.location.search);
   const param1 = searchParams.get('__name');
   
@@ -120,13 +125,13 @@ function Sofa(props) {
   const nodebrowse = Object.values(objec);
   
     return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} ref={ref}>
       {nodebrowse.map((obj, i) => { 
 
           console.log(nodes[nodebrowse[i].name]);
 
 
-          return(<mesh key={i} geometry={nodes[nodebrowse[i].name].geometry} castShadow={false}>
+          return(<mesh key={i} geometry={nodes[nodebrowse[i].name].geometry} castShadow={false} >
             <meshStandardMaterial 
             {...(material === "leather"
               ? leatherTextureProps
@@ -134,15 +139,16 @@ function Sofa(props) {
                 (nodes[nodebrowse[i].name]["material"]["name"] !== "WOOD")?
                 fabricTextureProps : woodTextureProps))}
               color=
-              {((typeof nodes[nodebrowse[i].name]["material"] != 'undefined') && (nodes[nodebrowse[i].name]["material"] !== "") && (!nodes[nodebrowse[i].name]["material"]["name"].toLowerCase().includes("leg")) && (nodes[nodebrowse[i].name]["material"]["name"] !== "BOTTOM") && (nodes[nodebrowse[i].name]["material"]["name"] !== "WOOD") && (nodes[nodebrowse[i].name]["material"]["name"] !== "LEATHER") && (nodes[nodebrowse[i].name]["material"]["name"] !== "METAL")
+              {((typeof nodes[nodebrowse[i].name]["material"] != 'undefined') && (nodes[nodebrowse[i].name]["material"] !== "") && (!nodes[nodebrowse[i].name]["material"]["name"].toLowerCase().includes("leg")) && (nodes[nodebrowse[i].name]["material"]["name"] != "BOTTOM") && (nodes[nodebrowse[i].name]["material"]["name"] != "WOOD") && (nodes[nodebrowse[i].name]["material"]["name"] != "LEATHER") && (nodes[nodebrowse[i].name]["material"]["name"] != "METAL")
               ? 
               ""
               : (
-              ((!nodes[nodebrowse[i].name]["material"]["name"].toLowerCase().includes("leg")) && (nodes[nodebrowse[i].name]["material"]["name"] !== "BOTTOM") && (nodes[nodebrowse[i].name]["material"]["name"] !== "METAL")) ? 
+              ((!nodes[nodebrowse[i].name]["material"]["name"].toLowerCase().includes("leg")) && (nodes[nodebrowse[i].name]["material"]["name"] != "BOTTOM") && (nodes[nodebrowse[i].name]["material"]["name"] != "METAL")) ? 
               "#835d41" : "black"
               )
               )}
             castShadow={false}
+            
           />
         </mesh>)
 

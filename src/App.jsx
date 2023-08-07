@@ -11,7 +11,7 @@ function App() {
   return (
     <CustomizationProvider>
       <div className="App">
-        <Canvas dpr={[1, 2]}>
+        <Canvas dpr={[1, 2]} shadows="false">
           <color attach="background" args={["#ffffff"]} />
           <Experience />
         </Canvas>
