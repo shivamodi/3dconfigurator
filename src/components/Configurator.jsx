@@ -2,6 +2,19 @@ import { act } from "@react-three/fiber";
 import { useCustomization } from "../contexts/Customization";
 
 const Configurator = () => {
+  function displayMessage (evt) {
+    var message;
+    if (evt.origin !== "https://cozyhomedubai.com") {
+    message = "Security blocked your access";
+    }
+    else {
+    message = evt.data;
+    }
+    console.log(message.replace(/_[0-9]{1,2}/, '').replace(/\s+/g, '-').toLowerCase());
+    setActiveFabric(message.replace(/_[0-9]{1,2}/, '').replace(/\s+/g, '-').toLowerCase());
+    setActiveTexture(message.replace(/_[0-9]{1,2}/, '').replace(/\s+/g, '-').toLowerCase());
+    //document.getElementById("received-message").innerHTML = message;
+    }  
   const {
     material,
     setMaterial,
@@ -15,68 +28,13 @@ const Configurator = () => {
     setActiveFabric,
     setActiveTexture,
   } = useCustomization();
-
-  return (
-    <div className="configurator">
-      <div className="configurator__section">
-        <div className="configurator__section__title">sofa material</div>
-        <div className="configurator__section__values">
-          <div
-            className={`item ${material === "leather" ? "item--active" : ""}`}
-            onClick={() => setMaterial("leather")}
-          >
-            <div className="item__label">Leather</div>
-          </div>
-          <div
-            className={`item ${material === "fabric" ? "item--active" : ""}`}
-            onClick={() => setMaterial("fabric")}
-          >
-            <div className="item__label">Fabric</div>
-          </div>
-        </div>
-      </div>
-      <div className="configurator__section">
-        <div className="configurator__section__title">sofa shade</div>
-        <div className="configurator__section__values">
-          {sofaShades.map((item, index) => (
-            <div
-              key={index}
-              className={`item ${
-                item.color === sofaShade.color ? "item--active" : ""
-              }`}
-              onClick={() => { setSofaShade(item); setActiveFabric(fabricColors[index][1]);  } }
-            >
-              <div
-                className="item__dot"
-                style={{ backgroundColor: item.color }}
-              />
-              <div className="item__label">{item.name}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="configurator__section">
-        <div className="configurator__section__title">Fabric color</div>
-        <div className="configurator__section__values">
-          {activeFabric.map((item, index) => (
-            <div
-              key={index}
-              className={`item ${
-                item.color === sofaShade.color ? "item--active" : ""
-              }`}
-              onClick={() => { setFabricColor(item); setActiveTexture(item.name); }}
-            >
-              <div
-                className="item__dot"
-                style={{ backgroundColor: item.color }}
-              />
-              <div className="item__label">{item.name}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
+  if (window.addEventListener) {
+    // For standards-compliant web browsers
+    window.addEventListener("message", displayMessage, false);
+    }
+    else {
+    window.attachEvent("onmessage", displayMessage);
+    }
+}
+  
 export default Configurator;
