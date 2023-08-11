@@ -21,7 +21,6 @@
   display: flex;
   flex-direction: column;
   gap: 0px;
-  display: none;
 }
 
 .configurator__section__title {
